@@ -1,4 +1,64 @@
-﻿
+﻿@inject ProductRepository productRepo
+
+@{
+    var productsWithTag2 = (await productRepo.GetAsync())
+        .Where(p => p.ProductTags.Any(pt => pt.TagId == 2));
+}
+
+@if (productsWithTag2 != null && productsWithTag2.Any())
+{
+    <section class="best-collection">
+        <div class="container">
+            <div class="best-title">
+                <h1>Best Collection</h1>
+                <div class="categories">
+                    <a class="category-link" href="#">All</a>
+                    <a class="category-link" href="#">Bags</a>
+                    <a class="category-link" href="#">Dress</a>
+                    <a class="category-link" href="#">Decoration</a>
+                    <a class="category-link" href="#">Essentials</a>
+                    <a class="category-link" href="#">Interior</a>
+                    <a class="category-link" href="#">Laptop</a>
+                    <a class="category-link" href="#">Mobile</a>
+                    <a class="category-link" href="#">Beauty</a>
+                </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                @foreach (var product in productsWithTag2)
+                {
+                    <div class="col">
+                        <a href="/Products/details/@product.Id">
+                            <div class="card">
+                                <img src="images/placeholders/270x295.svg" class="card-img-top" alt="...">
+                            </div>
+                            <div class="product-description">
+                                <div class="product-title">@product.Title</div>
+                                <p class="price">$@product.Price.ToString("0.00")</p>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+
+            <div class="best-btn">
+                <button class="btn-white">SHOP NOW</button>
+            </div>
+        </div>
+    </section>
+}
+else
+{
+    <div>
+        No products found with TagId = 2
+    </div>
+}
+
+
+
+
+
+
 <section class="best-collection">
     <div class="container">
         <div class="best-title">
