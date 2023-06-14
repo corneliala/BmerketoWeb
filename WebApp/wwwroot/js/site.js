@@ -41,19 +41,19 @@ const validateText = (event) => {
 const validateEmail = (event) => {
     const regEx = /^[\w.-]+@[a-zA-Z_-]+?(?:\.[a-zA-Z]{2,})+$/
 
-
     if (regEx.test(event.target.value)) {
         document.querySelector(`[data-valmsg-for="${event.target.id}"]`).innerHTML = ""
+    } else {
+        document.querySelector(`[data-valmsg-for="${event.target.id}"]`).innerHTML = "Invalid email"
     }
-    document.querySelector(`[data-valmsg-for="${event.target.id}"]`).innerHTML = "invalid email"
 }
 
 const validatePassword = (event) => {
-    const regEx = /^(?=.* [A - Za - z])(?=.*\d)[A - Za - z\d]{ 8, }$/
-
+    const regEx = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
 
     if (regEx.test(event.target.value)) {
         document.querySelector(`[data-valmsg-for="${event.target.id}"]`).innerHTML = ""
+    } else {
+        document.querySelector(`[data-valmsg-for="${event.target.id}"]`).innerHTML = "Invalid password"
     }
-    document.querySelector(`[data-valmsg-for="${event.target.id}"]`).innerHTML = "invalid password"
 }
