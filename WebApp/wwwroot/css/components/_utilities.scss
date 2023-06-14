@@ -1,0 +1,74 @@
+
+
+html, body {
+    font-size: 16px;
+    z-index: 0;
+    font-family: $font-roboto;
+    font-weight: $font-weight-regular;
+    color: $color-dark-3;
+}
+
+a {
+    text-decoration: none;
+    color: $color-theme-1;
+
+    &:hover {
+        text-decoration: underline;
+        color: $color-theme-1;
+    }
+}
+
+.position-static {
+    position: static;
+}
+
+.position-fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.button {
+    cursor: pointer;
+    font-family: $font-poppins;
+    padding: 8px 30px;
+    border: 1px solid $color-dark-1;
+    border-radius: 5px;
+    background-color: transparent;
+    color: $color-dark-1;
+    transition: all 0.2s;
+
+    &:hover {
+        background-color: $color-dark-1;
+        color: $color-white;
+        text-decoration: none;
+    }
+}
+
+.btn-white {
+    background-color: $color-white;
+    color: $color-dark-1;
+    
+}
+
+.btn-toggle {
+    padding: 5px 12px; 
+    font-size: 1.2rem;
+}
+
+.btn-theme {
+    border: none;
+    background-color: $color-theme-1;
+    color: $color-white;
+}
+
+.open-menu {
+    width: 100% !important;
+    opacity: 0.99;
+    transform: translateX(-100%);
+}
+
+.invalid {
+    border: 1px solid $color-theme-1 !important;
+} 

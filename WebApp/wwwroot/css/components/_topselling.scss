@@ -1,0 +1,38 @@
+.top-selling {
+
+    @include lg {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+    
+
+    .section-title {
+        padding: 3rem;
+        text-align: center;
+        
+        h2 {
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            padding-top: 2rem;
+            padding-bottom: 1.5rem;
+            color: $color-dark-2;
+
+        }
+    }
+
+    .slider-buttons {
+        display: none;
+
+        @include lg {
+            display: flex;
+            justify-content: center;
+        }
+       
+        
+        .slider-btn {
+            margin-right: 2rem;
+        }
+    }
+
+}

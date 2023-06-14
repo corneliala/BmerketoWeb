@@ -1,0 +1,90 @@
+.sales-showcase {
+    background-color: $color-theme-2;
+
+    
+    .container {
+
+        .sales-content{
+            padding: 3rem 0;
+
+            @include lg{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 6rem 0;
+            }
+
+
+            .left-card {
+                display: none;
+
+                @include lg {
+                    display:block;
+                }
+                
+
+            }
+
+
+            .sales-offer {
+                border-radius: 15px;
+                background-color: $color-white;
+                text-align: center;
+                margin-bottom: 3rem;
+                padding-bottom: 2rem;
+                padding-top:2rem;
+
+                @include lg{
+                    margin: 0;
+                    height: 430px;
+                    width: 370px;
+                }
+                
+
+                .highlight-text {
+                    
+                    color: $color-theme-1;
+                    font-size: 18px;
+                    font-weight: $font-weight-bold;
+
+                    @include lg {
+                        padding-top: 3rem;
+                    }
+
+                }
+                .sales-amount{
+                    font-family: $font-poppins;
+                    color: $color-dark-2;
+                    font-size: 48px;
+                    font-weight: $font-weight-bold;
+
+                    @include lg {
+                        font-size: 60px;
+                    }
+
+
+                }
+
+                .sales-title{
+                    color: $color-dark-2;
+                    font-size: 24px;
+                    font-weight: $font-weight-bold;
+
+                }
+
+                p{
+                    @include lg{
+                        padding: 0 3rem;
+                    }
+                }
+                
+
+                .discovery-link {
+                    color: $color-dark-2;
+                }
+            }
+        }
+
+    }
+
+}

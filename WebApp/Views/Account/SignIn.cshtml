@@ -1,0 +1,52 @@
+﻿@model UserSignInViewModel
+@{
+    ViewData["Title"] = "Sign In";
+}
+
+
+
+<section class="login-form ">
+    <div class="container">
+        <div class="title">@ViewData["Title"]</div>
+
+        <form method="post" class="col-10 col-xl-6">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label">
+                    Email*
+                </label>
+                <input asp-for="Email" class="form-control" onkeyup="validateEmail(event)" />
+                <small class="text-danger"><span asp-validation-for="Email"></span></small>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Password" class="form-label">Password*</label>
+                <input asp-for="Password" class="form-control" onkeyup="validatePassword(event)" />
+                <small class="text-danger"><span asp-validation-for="Password"></span></small>
+            </div>
+
+            <div class="terms form-checkbox-group">
+                <label class="custom-checkbox">
+                    <label asp-for="RememberMe"></label>
+                    <input asp-for="RememberMe">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <div class="mt-5">
+                <a asp-action="SignUp" asp-controller="Account">Don't have an account yet? Sign up here</a>
+            </div>
+
+
+            <div class="mt-5">
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-theme">SIGN IN</button>
+                </div>
+            </div>
+
+        </form>
+
+    </div>
+</section>

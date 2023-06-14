@@ -1,0 +1,48 @@
+﻿@model ContactFormViewModel
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<div class="d-flex justify-content-between ">
+    <h1 class="display-4">Contact Us</h1>
+    
+</div>
+
+
+<section class="contact-form ">
+    <div class="container">
+        <div class="title">@ViewData["Title"]</div>
+
+        <form asp-action="Index" asp-controller="Contacts" method="post" class="col-10 col-xl-6">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label">First Name</label>
+                <input asp-for="Name" class="form-control" />
+                <small class="text-danger"><span asp-validation-for="Name"></span></small>
+            </div>
+
+
+            <div class="mb-3">
+                <label asp-for="Email" class="form-label">Email</label>
+                <input asp-for="Email" class="form-control" />
+                <small class="text-danger"><span asp-validation-for="Email"></span></small>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Message" class="form-label">Message</label>
+                <textarea asp-for="Message" class="form-control"></textarea>
+                <small class="text-danger"><span asp-validation-for="Message"></span></small>
+            </div>
+
+            <div class="mt-5">
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </div>
+
+        </form>
+        
+    </div>
+</section>

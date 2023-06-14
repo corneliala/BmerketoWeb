@@ -1,0 +1,52 @@
+﻿
+@{ ViewData["Title"] = "Admin - Dashboard"; }
+@inject UserManager<IdentityUser> userManager
+
+
+<div>
+    @{
+        var users = userManager.Users.ToList(); // Load users into a separate list
+    }
+
+    @foreach (var user in users)
+    {
+        var roles = await userManager.GetRolesAsync(user); // Load roles for each user
+
+        <div class="mb-5">
+            <div>@user.Email</div>
+            <div>
+                @foreach (var role in roles)
+                {
+                    <div>@role</div>
+                }
+            </div>
+        </div>
+    }
+</div>
+
+
+<section class="admin-dashboard">
+    <div class="container">
+        <div class="title">Admin Dashboard</div>
+
+        <div class="admin-grid">
+
+            <div class="all-users">
+                <button class="btn options">List Users</button>
+            </div>
+
+
+            <div class="add-product">
+                <button class="btn options"> Add Products</button>
+            </div>
+
+
+            <div class="manage-users">
+                <button class=" btn options">Manage Users</button>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>

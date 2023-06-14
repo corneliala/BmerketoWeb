@@ -1,0 +1,40 @@
+.best-collection {
+        .best-title {
+            padding: 3rem;
+
+            h1 {
+                display: flex;
+                justify-content: center;
+                padding-top: 2rem;
+                padding-bottom: 1.5rem;
+                color: $color-dark-2;
+    
+            }
+            
+            .categories {
+                display: none;
+                
+                
+                @include lg {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .category-link {
+                    color: $color-dark-2;
+                }
+        
+                a + a:before {
+                    content: "\00a0/\00a0";
+                }
+
+            }
+            
+        }
+        
+    .best-btn {
+        display:flex;
+        justify-content: center;
+        margin: 3rem;
+    }
+}

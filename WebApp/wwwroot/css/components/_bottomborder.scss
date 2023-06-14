@@ -1,0 +1,15 @@
+.bottom-border {
+    background-color: $color-dark-2;
+    padding-bottom: 4rem;
+
+    @include lg{
+        padding: 1rem;
+    }
+    
+
+    p {
+        color: $color-dark-4;
+        padding-top: 0.5rem;
+        text-align: center;
+    }
+}

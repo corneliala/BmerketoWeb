@@ -1,0 +1,73 @@
+.subscribe-now {
+    background-color: $color-dark-4;
+    padding: 2rem;
+    margin-top: 3rem;
+    
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+        .subscribe-title {
+            background-color: $color-white;
+            padding: 4rem ;
+            
+
+        p{
+            color: $color-theme-1;
+            font-weight: $font-weight-bold;
+            text-align: center; 
+        }
+    
+        .subscribe {
+            width:300px;
+        @include lg {
+            width: 750px;
+        }
+    
+        #subscribeForm {
+            position: relative;
+            border-radius: 25px;
+            height: 45px;
+            
+    
+            input {
+                position: absolute;
+                border-radius: 25px;
+                height: 100%;
+                width: 100%;
+                outline: none;
+                border: 1px solid $color-dark-4;
+                font-size: 0.9rem;
+                padding-left: 1.3rem;
+            }
+    
+            button {
+                position: absolute;
+                top: 0;
+                right:-2px;
+                height: 100%;
+                padding: 0 1rem;
+                background-color: $color-theme-1;
+                color: $color-white;
+                border: none;
+                border-radius:  25px;
+                transition: 0.3s ease-in-out;
+    
+                &:hover {
+                    background-color: $color-dark-2;
+                }
+    
+            }
+        }
+        }
+    
+    
+        }
+
+    }
+    
+    
+}    
